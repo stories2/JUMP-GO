@@ -1,12 +1,14 @@
-<div fxLayout="row" ngClass='full-screen' fxLayoutAlign="center center">
+<div fxFlex fxLayout="row" ngClass='full-screen' fxLayoutAlign="center center">
   <mat-card fxFlex="80" fxLayout="column">
     <h2>URL SHORTER</h2>
     <form fxLayout="row" [formGroup]="convertForm">
-        <mat-form-field fxFlex="80">
-          <input matInput placeholder="URL: https://google.com/dsfjl;sdfa;j" [(ngModel)]="url" type="url" required formControlName="url">
-        </mat-form-field>
-        <div fxFlex="5"></div>
-        <button fxFlex="15" mat-stroked-button color="warn" [disabled]="convertForm.status === 'INVALID'">GO!</button>
+      <mat-form-field fxFlex="80">
+        <input matInput placeholder="URL: https://google.com/dsfjl;sdfa;j" [(ngModel)]="url" type="url" required
+          formControlName="url">
+      </mat-form-field>
+      <div fxFlex="5"></div>
+      <button fxFlex="15" mat-stroked-button color="warn" [disabled]="convertForm.status === 'INVALID'">GO!</button>
     </form>
+    <div *ngIf="shortURL">Result: <span>{{shortURL}}</span></div>
   </mat-card>
 </div>

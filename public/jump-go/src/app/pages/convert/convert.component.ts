@@ -10,6 +10,7 @@ export class ConvertComponent implements OnInit {
 
   url: string;
   convertForm: FormGroup;
+  shortURL: string;
 
   constructor(private fb: FormBuilder) {
     this.initForm();
