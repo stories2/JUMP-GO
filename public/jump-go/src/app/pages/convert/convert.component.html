@@ -3,11 +3,11 @@
     <h2>URL SHORTER</h2>
     <form fxLayout="row" [formGroup]="convertForm">
       <mat-form-field fxFlex="80">
-        <input matInput placeholder="URL: https://google.com/dsfjl;sdfa;j" [(ngModel)]="url" type="url" required
+        <input matInput placeholder="URL: https://google.com/dsfjl;sdfa;j" [(ngModel)]="data.url" type="url" required
           formControlName="url">
       </mat-form-field>
       <div fxFlex="5"></div>
-      <button fxFlex="15" mat-stroked-button color="warn" [disabled]="convertForm.status === 'INVALID'">GO!</button>
+      <button fxFlex="15" mat-stroked-button color="warn" [disabled]="convertForm.status === 'INVALID'" (click)="submitURL()">GO!</button>
     </form>
     <div *ngIf="shortURL">Result: <span>{{shortURL}}</span></div>
   </mat-card>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-go',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GoComponent implements OnInit {
 
-  constructor() { }
+  uid: string;
+
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
+    this.uid = this.route.snapshot.params.uid;
   }
 
 }
