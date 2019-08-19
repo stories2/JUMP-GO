@@ -19,7 +19,7 @@ https://jump-go.web.app/go/5XltiREh8OswA2xwwNI6
 47
 ```
 
-## How to work?
+## How it works?
 
 ![form input](src/form.jpg)
 
